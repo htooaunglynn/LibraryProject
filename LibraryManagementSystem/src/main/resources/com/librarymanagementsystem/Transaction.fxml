@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="420.0" prefWidth="1002.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.librarymanagementsystem.controller.TransactionController">
+   <children>
+      <ScrollPane layoutX="14.0" layoutY="14.0" prefHeight="316.0" prefWidth="284.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="316.0" prefWidth="285.0">
+               <children>
+                  <TableView fx:id="tblBook" prefHeight="316.0" prefWidth="284.0">
+                    <columns>
+                      <TableColumn fx:id="colBookID" prefWidth="54.0" text="ID" />
+                      <TableColumn fx:id="colBookTitle" prefWidth="123.0" text="Title" />
+                        <TableColumn fx:id="colAvailable" prefWidth="88.0" text="Available" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <ScrollPane layoutX="317.0" layoutY="14.0" prefHeight="316.0" prefWidth="659.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="316.0" prefWidth="658.0">
+               <children>
+                  <TableView fx:id="tblTransaction" prefHeight="316.0" prefWidth="659.0">
+                    <columns>
+                      <TableColumn fx:id="colTid" prefWidth="49.0" text="ID" />
+                      <TableColumn fx:id="colTcardId" prefWidth="74.0" text="Card ID" />
+                        <TableColumn fx:id="colTbookId" prefWidth="125.0" text="Book ID" />
+                        <TableColumn fx:id="colTBorrowDate" prefWidth="119.0" text="Borrow Date" />
+                        <TableColumn fx:id="colTDueDate" prefWidth="112.0" text="Due Date" />
+                        <TableColumn fx:id="colTFees" prefWidth="87.0" text="Fees" />
+                        <TableColumn fx:id="colTAdminId" prefWidth="76.0" text="Librarian ID" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <TextField fx:id="txtCardId" layoutX="53.0" layoutY="354.0" promptText="Card ID">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtBookId" layoutX="309.0" layoutY="354.0" promptText="Book ID">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </TextField>
+      <Button layoutX="595.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnBorrow" text="Borrow">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="737.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnReturn" text="Return">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <Button layoutX="880.0" layoutY="354.0" mnemonicParsing="false" onAction="#btnBack" text="Back">
+         <font>
+            <Font name="Comic Sans MS" size="15.0" />
+         </font>
+      </Button>
+      <TextField fx:id="txtBookAvailable" layoutX="542.0" layoutY="358.0" prefHeight="9.0" prefWidth="18.0" promptText="Available" visible="false" />
+      <TextField fx:id="txtUdeDate" layoutX="951.0" layoutY="358.0" prefHeight="25.0" prefWidth="18.0" visible="false" />
+   </children>
+</AnchorPane>

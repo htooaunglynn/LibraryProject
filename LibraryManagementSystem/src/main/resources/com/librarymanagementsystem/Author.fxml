@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="433.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.librarymanagementsystem.controller.AuthorController">
+   <children>
+      <Label layoutX="262.0" layoutY="6.0" text="Author">
+         <font>
+            <Font name="Comic Sans MS Bold" size="24.0" />
+         </font>
+      </Label>
+      <ScrollPane layoutX="14.0" layoutY="49.0" prefHeight="236.0" prefWidth="575.0">
+        <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="235.0" prefWidth="573.0">
+               <children>
+                  <TableView fx:id="tblAuthor" prefHeight="236.0" prefWidth="575.0">
+                    <columns>
+                      <TableColumn fx:id="colID" prefWidth="66.0" text="ID" />
+                      <TableColumn fx:id="colName" prefWidth="123.0" text="Name" />
+                        <TableColumn fx:id="colCity" prefWidth="122.0" text="City" />
+                        <TableColumn fx:id="colBirthday" prefWidth="137.0" text="Birthday" />
+                        <TableColumn fx:id="colCreated" prefWidth="110.0" text="Created by" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+        </content>
+      </ScrollPane>
+      <TextField fx:id="txtName" layoutX="14.0" layoutY="298.0" promptText="Name">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="txtCity" layoutX="213.0" layoutY="298.0" promptText="City">
+         <font>
+            <Font name="Comic Sans MS" size="13.0" />
+         </font>
+      </TextField>
+      <DatePicker fx:id="dateBirthday" layoutX="412.0" layoutY="299.0" promptText="Birthday" />
+      <Button layoutX="120.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnAdd" prefHeight="51.0" prefWidth="73.0" text="Add">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="266.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnEdit" prefHeight="51.0" prefWidth="73.0" text="Edit">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Button>
+      <Button layoutX="402.0" layoutY="360.0" mnemonicParsing="false" onAction="#btnBack" prefHeight="51.0" prefWidth="73.0" text="Back">
+         <font>
+            <Font name="Comic Sans MS Bold Italic" size="13.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
